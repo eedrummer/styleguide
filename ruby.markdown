@@ -1,4 +1,4 @@
-Andy Gregorowicz's Ruby Style Guide
+Andy Gregorowicz's Ruby Style Guide (mostly copied from others)
 ===============================
 Formatting:
 -----------
@@ -113,7 +113,6 @@ Comments:
 ---------
 
 * Comments longer than a word are capitalized and use punctuation.
-  Use two spaces after periods.
 
 * Avoid superfluous comments.
 
@@ -127,7 +126,7 @@ The rest:
 
 * Avoid long parameter lists.
 
-* Use def self.method to define singleton methods.
+* Use def self.method to define class methods. Avoid class << self blocks.
 
 * Add "global" methods to Kernel (if you have to) and make them private.
 
@@ -154,12 +153,6 @@ General:
   (See http://www.erlang.se/doc/programming_rules.shtml#HDR11.)
 
 * Keep the code simple.
-
-* Don't overdesign.
-
-* Don't underdesign.
-
-* Avoid bugs.
 
 * Read other style guides and apply the parts that don't dissent with
   this list.
