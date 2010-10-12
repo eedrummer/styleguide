@@ -1,4 +1,4 @@
-Sascha Teske's Ruby Style Guide
+Andy Gregorowicz's Ruby Style Guide
 ===============================
 Formatting:
 -----------
@@ -48,16 +48,12 @@ Syntax:
   of thumb: If you have to use outer parentheses, you are using the
   wrong operators.)
 
-* Avoid multiline ?:, use if.
+* Avoid use of ?:
 
 * Methods should have parenthesized options, unless they are called as DSL components
   (e.g. Witness.new(:statement => 'Lots of important stuff', :format => :plaintext) but  read_a :book, :when_it_is_interesting)
 
-* Prefer {...} over do...end.  Multiline {...} is fine: having
-  different statement endings (} for blocks, end for if/while/...)
-  makes it easier to see what ends where.  But use do...end for
-  "control flow" and "method definitions" (e.g. in Rakefiles and
-  certain DSLs.)  Avoid do...end when chaining.
+* Prefer do...end over {...}. Curly braces are acceptable for one line blocks and code chaining.
 
 * Avoid return where not required.
 
@@ -67,7 +63,7 @@ Syntax:
 
     if v = array.grep(/foo/) ...
 
-* Use ||= freely.
+* Use ||= freely. It can be used to initialize a varible if it is nil.
 
 * Use non-OO regexps (they won't make the code better).  Freely use
   =~, $0-9, $~, $` and $' when needed.
@@ -104,8 +100,6 @@ Naming:
   And in general, the first letter of the class name if all objects
   are of that type.
 
-* Use _ or names prefixed with _ for unused variables.
-
 * When using inject with short blocks, name the arguments |a, e|
   (mnemonic: accumulator, element)
 
@@ -126,8 +120,6 @@ Comments:
 
 The rest:
 ---------
-
-* Write ruby -w safe code.
 
 * Avoid hashes-as-optional-parameters.  Does the method do too much?
 
